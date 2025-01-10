@@ -13,8 +13,8 @@ Este é um projeto de gestão de finanças utilizando AdonisJS no backend e Nuxt
 1. Clone o repositório:
 
    ```sh
-   git clone <URL_DO_REPOSITORIO>
-   cd finance-manager
+   git clone https://github.com/HenriqueMVSS/financeManager-backend-adonisjs.git
+   cd financeManager-backend-adonisjs
    ```
 
 2. Instale as dependências:
