@@ -45,5 +45,11 @@ router
         })
       )
       .prefix('/incomes')
+
+      router.post('/logout', [AuthController, 'logout']).use(
+        middleware.auth({
+          guards: ['api'],
+        })
+      )
   })
   .prefix('/api')

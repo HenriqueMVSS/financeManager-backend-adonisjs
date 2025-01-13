@@ -25,12 +25,6 @@ export default class IncomesController {
 
   public async store({ request, response }: HttpContext) {
     try {
-      // const body = request.body() as {
-      //   category: string
-      //   value: number
-      //   amountReceived: number
-      //   receiptDate: Date
-      // }
 
       const payload = await request.validateUsing(createIncomeValidator)
       const income = await this.incomeService.store(payload)
@@ -44,12 +38,6 @@ export default class IncomesController {
 
   public async update({ params, request }: HttpContext) {
     try {
-      // const body = request.body() as {
-      //   category: string
-      //   value: number
-      //   amountReceived: number
-      //   receiptDate: Date
-      // }
       const payload = await request.validateUsing(updateIncomeValidator)
       return await this.incomeService.update(payload, params.id)
     } catch (error) {

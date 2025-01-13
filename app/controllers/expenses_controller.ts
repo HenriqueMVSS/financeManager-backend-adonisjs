@@ -25,12 +25,6 @@ export default class ExpensesController {
 
   public async store({ request, response }: HttpContext) {
     try {
-      // const body = request.body() as {
-      //   category: string
-      //   value: number
-      //   amountPaid: number
-      //   expirationDate: Date
-      // }
       const payload = await request.validateUsing(createExpenseValidator)
       const expense = await this.expenseService.store(payload)
       response.status(201)
@@ -43,12 +37,6 @@ export default class ExpensesController {
 
   public async update({ params, request }: HttpContext) {
     try {
-      // const body = request.body() as {
-      //   category: string
-      //   value: number
-      //   amountPaid: number
-      //   expirationDate: Date
-      // }
 
       const payload = await request.validateUsing(updateExpenseValidator)
 
